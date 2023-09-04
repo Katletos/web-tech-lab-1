@@ -28,13 +28,24 @@ public class ProgrammerBook extends Book {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        if (!super.equals(o)) {
+            return false;
+        }
 
         ProgrammerBook that = (ProgrammerBook) o;
 
-        if (level != that.level) return false;
+        if (level != that.level) {
+            return false;
+        }
+
         return Objects.equals(language, that.language);
     }
 

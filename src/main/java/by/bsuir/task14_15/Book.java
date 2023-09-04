@@ -45,13 +45,24 @@ public class Book implements Comparable<Book>{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         Book book = (Book) o;
 
-        if (price != book.price) return false;
-        if (!Objects.equals(title, book.title)) return false;
+        if (price != book.price) {
+            return false;
+        }
+
+        if (!Objects.equals(title, book.title)) {
+            return false;
+        }
+
         return Objects.equals(author, book.author);
     }
 
